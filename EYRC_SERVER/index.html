@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="e-Yantra Robotics Competition (eYRC) is a unique annual competition for undergraduate students in Engineering/ Science/ Polytechnic colleges." />
+	<meta name="description" content="e-Yantra Robotics Compeititon">
+	<meta name="description" content="Innovation Challenge">
+	<meta name="description" content="IIT Bombay">
+	<meta name="description" content="Robotics">
+	<meta name="description" content="Technical">
+	<meta name="description" content="IITB Internship">
+	<meta name="author" content="e-Yantra">
+    <title>Slot Booking</title>
+    <!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="https://portal.e-yantra.org/img/favicon_io/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://portal.e-yantra.org/img/favicon_io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://portal.e-yantra.org/img/favicon_io/favicon-16x16.png">
+	<link rel="manifest" href="https://portal.e-yantra.org/img/favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="slot-booking-box" class="slot-box">
+            <h2>Slot Booking</h2>
+            <form>
+                <div class="user-box">
+                    <label for="slots">Select a Slot</label>
+
+                    <select id="slots" name="slots" required>
+                        <option value="">--Select a date and time slot--</option>
+                        <iframe class="web-worker-ext-host-iframe" sandbox="allow-scripts allow-same-origin" allow="usb; serial; hid; cross-origin-isolated;" aria-hidden="true" src="http://localhost:9090/stable-effc6e95b4ad1c5ac5f9083ec06663ba4a2e005c/static/out/vs/workbench/services/extensions/worker/webWorkerExtensionHostIframe.html?&amp;vscodeWebWorkerExtHostId=08d42219-502e-4045-b6e2-d3dbfa6950a2" style="display: none;"></iframe>
+                    </select>
+                    
+                </div>
+                <div class="button-box">
+                    <button id="submit_btn" class="btn" type="submit" disabled>Book Slot</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="slot-booked-box" class="slot-box" style="display: none;">
+            <h2>Slot Booked</h2>
+            <div class="user-box">
+                <label>Slot Details:</label>
+                <p id="slotDetails"></p>
+            </div>
+            <div class="user-box">
+                <label id="time_info"></label>
+                <span id="countdown"></span>
+            </div>
+            <div class="button-box">
+                <button id="start_development" class="btn">Start Development</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
